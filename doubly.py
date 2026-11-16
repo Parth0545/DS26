@@ -1,0 +1,23 @@
+class Node:
+    def __init__(self,data=None,pre=None,next=None):
+        self.next=next
+        self.pre=pre
+        self.data=data
+        
+node1=Node(10)
+node2=Node(20)
+node3=Node(30)
+    
+node1.next=node2
+node2.next=node3
+    
+node2.pre=node1
+node3.pre=node2
+    
+head=node1
+current=head
+    
+while current is not None:
+    print(current.data,end=" -> ")
+    current=current.next
+print("None")
